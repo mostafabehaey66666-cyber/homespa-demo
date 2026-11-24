@@ -1,4 +1,4 @@
-:root{--rose:#b8566f;--rose-d:#8f3b53;--blush:#fbeef1;--gold:#b98f4a;--ink:#2d2226;--muted:#6f5f64}
+:root{--rose:#1f3bd0;--rose-d:#e6c98a;--blush:#0a1450;--gold:#d2ae62;--ink:#f4f1ea;--muted:#aeb7e0;--navy:#040824;--navy2:#08113f;--navy3:#0d1a63}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:"Cairo","Segoe UI","Noto Sans Arabic",Tahoma,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.7}
@@ -99,3 +99,61 @@ footer{background:linear-gradient(135deg,#2d2226,#4a2b37)}
 .reveal.in{opacity:1;transform:none}
 @media (max-width:760px){.facts{margin:-28px 4vw 0}.facts i{font-size:20px}h2{font-size:28px}form{padding:18px}}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---- brand restyle: deep navy + gold ---- */
+body{background:var(--navy);color:var(--ink)}
+.demo-bar{background:#000;color:#d2ae62}
+.top{background:rgba(4,8,36,.92);border-bottom:1px solid rgba(210,174,98,.35)}
+.brand{color:var(--gold);letter-spacing:.5px}
+.logo{background:transparent;border:1.5px solid var(--gold);color:var(--gold)}
+nav a{color:#c8d0f5}
+nav a:hover{color:var(--gold)}
+.btn{background:linear-gradient(135deg,#2742e0,#14258f);color:#fff;box-shadow:0 8px 22px rgba(31,59,208,.45);border:1px solid rgba(210,174,98,.6)}
+.btn:hover{background:linear-gradient(135deg,#3552f0,#1a2fa8);box-shadow:0 12px 28px rgba(31,59,208,.6)}
+.btn-ghost{background:transparent;border:1.5px solid var(--gold);color:var(--gold)}
+.btn-ghost:hover{background:rgba(210,174,98,.14)}
+.btn-ghost-dark{color:var(--gold);border:1.5px solid var(--gold);background:transparent;box-shadow:none}
+.btn-ghost-dark:hover{background:rgba(210,174,98,.14)}
+.hero-img{filter:saturate(.7) brightness(.8)}
+.hero:after{content:"";position:absolute;inset:0;background:#1530b8;mix-blend-mode:color;opacity:.9;pointer-events:none}
+.hero-shade{z-index:1;background:linear-gradient(270deg,rgba(4,8,36,.92) 0%,rgba(4,8,36,.6) 55%,rgba(4,8,36,.25) 100%)}
+.hero-text{z-index:2}
+.hero-text{position:relative}
+.eyebrow{color:var(--gold)}
+.lead{color:#dfe4ff}
+.facts{background:linear-gradient(180deg,#0c1760,#070f45);border:1px solid rgba(210,174,98,.55);box-shadow:0 16px 40px rgba(0,0,10,.6)}
+.facts div{border-color:rgba(210,174,98,.25)}
+.facts strong{color:#fff}
+.facts span{color:var(--muted)}
+.alt{background:linear-gradient(180deg,var(--navy2),#0a1553)}
+h2{color:#fff}
+.sub,.note{color:var(--muted)}
+.orn{color:var(--gold)}
+.card{background:linear-gradient(180deg,#0d1a63,#081046);border:1px solid rgba(210,174,98,.45);box-shadow:0 10px 30px rgba(0,0,10,.5)}
+.card:hover{box-shadow:0 16px 40px rgba(31,59,208,.35)}
+.card img{filter:saturate(.7) brightness(.85)}
+.card:before{content:"";position:absolute;top:0;left:0;right:0;aspect-ratio:4/3;background:#1530b8;mix-blend-mode:color;opacity:.85;z-index:1;pointer-events:none}
+.num{z-index:2;background:rgba(4,8,36,.8);color:var(--gold);border:1px solid var(--gold)}
+.card h3{color:#fff}
+.card p{color:var(--muted)}
+.steps li{background:#0b1655;border:1px solid rgba(210,174,98,.35);box-shadow:none}
+.steps b{background:transparent;border:1.5px solid var(--gold);color:var(--gold)}
+form{background:linear-gradient(180deg,#0b1658,#071040);border:1px solid rgba(210,174,98,.5);box-shadow:0 12px 36px rgba(0,0,10,.55)}
+label{color:#e7eaff}
+input,select,textarea{background:#050b33;border:1.5px solid rgba(210,174,98,.35);color:#fff}
+input::placeholder,textarea::placeholder{color:#7d88c4}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+input[type=date]{color-scheme:dark}
+.err{color:#ff9aa8}
+.map{border:1px solid rgba(210,174,98,.5);box-shadow:0 6px 24px rgba(0,0,10,.5)}
+.map iframe{filter:invert(.92) hue-rotate(200deg) saturate(.8) brightness(.95)}
+.faq details{background:#0b1655;border:1px solid rgba(210,174,98,.35)}
+.faq summary{color:var(--gold)}
+.faq p{color:var(--muted)}
+.note a{color:var(--gold)}
+footer{background:#02051a;border-top:1px solid rgba(210,174,98,.45);color:#e7eaff}
+footer b{color:var(--gold)}
+footer p{color:#9aa4d6}
+footer a{text-decoration:none}
+footer a:hover{color:var(--gold)}
+@media (max-width:760px){.hero-shade{background:linear-gradient(0deg,rgba(4,8,36,.95) 0%,rgba(4,8,36,.5) 70%)}}
