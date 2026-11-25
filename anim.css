@@ -1,0 +1,57 @@
+/* soften blue + motion layer (loaded after style.css) */
+:root{--rose:#4a5db0;--navy:#0a0f2c;--navy2:#0e1538;--navy3:#141d4f}
+body{background:var(--navy)}
+.top{background:rgba(10,15,44,.9);transition:padding .3s,box-shadow .3s}
+.top.shrunk{padding-block:6px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.btn{background:linear-gradient(135deg,#5468b8,#33458f);box-shadow:0 8px 22px rgba(60,80,160,.35);position:relative;overflow:hidden}
+.btn:hover{background:linear-gradient(135deg,#6579c8,#3d50a0);box-shadow:0 12px 28px rgba(60,80,160,.5)}
+.btn:after{content:"";position:absolute;top:0;bottom:0;width:60%;left:-80%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);transition:left .7s}
+.btn:hover:after{left:130%}
+.hero:after{background:#4a5db0;opacity:.45}
+.hero-shade{background:linear-gradient(270deg,rgba(10,15,44,.9) 0%,rgba(10,15,44,.58) 55%,rgba(10,15,44,.2) 100%)}
+.hero-img{filter:saturate(.85) brightness(.85);will-change:transform;transform:scale(1.12)}
+.facts{background:linear-gradient(180deg,#161f55,#0f1745)}
+.alt{background:linear-gradient(180deg,var(--navy2),#121a4a)}
+.card{background:linear-gradient(180deg,#161f55,#0e1540)}
+.card:before{background:#4a5db0;opacity:.4}
+.card img{filter:saturate(.85) brightness(.9)}
+.card:hover{box-shadow:0 18px 44px rgba(74,93,176,.35)}
+.steps li{background:#131c52}
+form{background:linear-gradient(180deg,#141d53,#0d1442)}
+input,select,textarea{background:#0b1236}
+.faq details{background:#131c52}
+.map iframe{filter:invert(.92) hue-rotate(200deg) saturate(.5) brightness(.95)}
+footer{background:#070b22}
+/* motion */
+.js .reveal{opacity:1;transform:none;transition:none}
+.js .rv{opacity:0;transform:translateY(34px) scale(.98);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv-l{transform:translateX(-40px)}.js .rv-r{transform:translateX(40px)}
+.js h2:after{content:"";display:block;height:2px;width:0;margin-top:8px;background:linear-gradient(90deg,var(--gold),transparent);transition:width 1s .3s}
+.js h2.in:after{width:90px}
+.js .card.rv.in{transition:opacity .8s,transform .8s,box-shadow .3s}
+.card.in:hover,.card:hover{transform:translateY(-8px)}
+.card .num{transition:transform .3s}.card:hover .num{transform:scale(1.12) rotate(-4deg)}
+.card h3{transition:color .3s}.card:hover h3{color:var(--gold)}
+.steps li{transition:transform .3s,border-color .3s,box-shadow .3s}
+.steps li:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 12px 28px rgba(0,0,0,.35)}
+.steps b{transition:background .3s,color .3s}.steps li:hover b{background:var(--gold);color:#0a0f2c}
+.facts div{transition:transform .3s}.facts div:hover{transform:translateY(-4px)}
+.facts i{display:inline-block;animation:float 4s ease-in-out infinite}
+.facts div:nth-child(2) i{animation-delay:.6s}.facts div:nth-child(3) i{animation-delay:1.2s}
+.orn{display:inline-block;animation:spin 14s linear infinite}
+nav a{position:relative;transition:color .3s}
+nav a:after{content:"";position:absolute;inset-inline:0;bottom:-4px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s}
+nav a:hover:after{transform:scaleX(1)}
+.fab{animation:pulse 2.6s infinite}
+input,select,textarea{transition:border-color .3s,box-shadow .3s}
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 4px rgba(210,174,98,.18)}
+.faq details{transition:border-color .3s,transform .3s}.faq details:hover{border-color:var(--gold);transform:translateX(-3px)}
+#prog{position:fixed;top:0;inset-inline:0;height:3px;z-index:50;background:linear-gradient(90deg,var(--gold),#f3d9a8);transform-origin:right;transform:scaleX(0)}
+.js .hero-text>*{opacity:0;transform:translateY(26px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+.js .hero-text>*:nth-child(1){animation-delay:.15s}.js .hero-text>*:nth-child(2){animation-delay:.3s}.js .hero-text>*:nth-child(3){animation-delay:.5s}.js .hero-text>*:nth-child(4){animation-delay:.7s}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes float{50%{transform:translateY(-6px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .hero-text>*{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}.facts i,.orn,.fab{animation:none}.hero-img{transform:none}}
